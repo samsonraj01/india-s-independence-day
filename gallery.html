@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Archival Historical Gallery | India's 80th Independence Day</title>
+  <meta name="description" content="Browse through historical photographs, maps, national symbols, and modern achievements in our digital media archive.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Archival Historical Gallery - India's 80th Independence Day">
+  <meta property="og:description" content="View public-domain photographs, paintings, and symbols documenting India's journey to freedom.">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg">
+  <link rel="canonical" href="https://example.com/80th-ind/gallery.html">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header Navigation -->
+  <header id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="India Journey to Freedom Home">
+        <div class="ashoka-chakra-logo" aria-hidden="true"></div>
+        <div class="logo-text">India: <span>Journey to Freedom</span></div>
+      </a>
+      
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="freedom-fighters.html">Freedom Fighters</a></li>
+          <li><a href="freedom-struggle.html">Freedom Struggle</a></li>
+          <li><a href="timeline.html">Struggle Timeline</a></li>
+          <li><a href="india-journey.html">India @ 100</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme" role="switch" aria-checked="false">
+          <div class="theme-toggle-knob" aria-hidden="true">☀️</div>
+        </button>
+        <button class="hamburger-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Title Header -->
+  <main class="section" style="padding-top: 8rem;" aria-labelledby="gallery-title-h1">
+    <div class="section-container">
+      
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Visual Archives</span>
+        <h1 class="section-title" id="gallery-title-h1">Historical Media Gallery</h1>
+        <p class="section-desc">
+          Click on any photo to open a fullscreen lightbox with descriptions, key context, and public-domain references.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-buttons" role="tablist" aria-label="Gallery Category Filters" style="justify-content: center; margin-bottom: var(--spacing-lg);">
+        <button class="filter-btn gallery-filter-btn active" data-filter="All" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Freedom Movement" role="tab" aria-selected="false">Struggle Movements</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Freedom Fighters" role="tab" aria-selected="false">Fighters</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="1947" role="tab" aria-selected="false">1947</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Red Fort" role="tab" aria-selected="false">Red Fort</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="National Symbols" role="tab" aria-selected="false">National Symbols</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Modern India" role="tab" aria-selected="false">Modern India</button>
+      </div>
+
+      <!-- Masonry Grid Container -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered dynamically by js/gallery.js -->
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox Display">
+    <button class="lightbox-close" aria-label="Close Lightbox Modal">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Show Previous Image">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" aria-label="Show Next Image">&#10095;</button>
+    <div class="lightbox-content-wrap">
+      <img class="lightbox-img" src="" alt="Lightbox Visual Content">
+      <div class="lightbox-caption-box">
+        <h3 class="lightbox-title">Image Title</h3>
+        <p class="lightbox-desc">Detailed image descriptions and archival attributes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>India: Journey to Freedom</h4>
+        <p>An educational project celebrating India's independence struggle, its national heroes, and its post-independence journey.</p>
+        <p style="margin-top: 15px; font-size:0.85rem; color:var(--text-muted);">Built as an educational historical project.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="freedom-fighters.html">Freedom Fighters</a></li>
+          <li><a href="freedom-struggle.html">Freedom Struggle</a></li>
+          <li><a href="timeline.html">Struggle Timeline</a></li>
+          <li><a href="india-journey.html">Post-Independence Journey</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sources.html">Sources & References</a></li>
+        </ul>
+      </div>
+      
+      <!-- Share features removed -->
+    </div>
+    
+    <div class="footer-details">
+      <div class="footer-year-calc">
+        <span>15 August 1947 → 15 August <span class="dynamic-year">2026</span></span>
+        <span style="color:var(--saffron); font-weight:700;">🇮🇳 <span class="dynamic-celebration">80th</span> Independence Day</span>
+      </div>
+      <div>
+        Remembering the millions who contributed to India's freedom.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll back to top" id="back-to-top-btn">
+    ▲
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

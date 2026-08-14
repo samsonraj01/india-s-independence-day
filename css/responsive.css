@@ -1,0 +1,193 @@
+/* 
+   INDIA: JOURNEY TO FREEDOM - 80TH INDEPENDENCE DAY
+   RESPONSIVE LAYOUT STYLESHEET (css/responsive.css)
+*/
+
+/* --- 1. TABLET & SMALL DESKTOPS (Max 1024px) --- */
+@media screen and (max-width: 1024px) {
+  .nav-container {
+    padding: 1rem var(--spacing-md);
+  }
+  
+  .explanation-card {
+    padding: 2rem;
+    gap: var(--spacing-md);
+  }
+  
+  .gallery-grid {
+    column-count: 2;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .footer-cta {
+    grid-column: span 2;
+    margin-top: var(--spacing-sm);
+  }
+}
+
+/* --- 2. MOBILE LANDSCAPE & TABLETS (Max 768px) --- */
+@media screen and (max-width: 768px) {
+  /* Hamburger Menu Show/Hide */
+  .hamburger-btn {
+    display: block;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--bg-secondary);
+    border-left: 1px solid var(--border-color);
+    box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6rem var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    gap: var(--spacing-sm);
+    z-index: 1000;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links li {
+    width: 100%;
+  }
+  
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1.1rem;
+  }
+  
+  .nav-links a.active {
+    border-bottom: none;
+    border-left: 3px solid var(--saffron);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  }
+  
+  /* Hero Overrides */
+  .hero {
+    padding: 7rem var(--spacing-md) 3rem var(--spacing-md);
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 320px;
+    margin: 0 auto var(--spacing-lg) auto;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  /* Milestone Transition Card */
+  .transition-container {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .transition-flex {
+    gap: 1rem;
+  }
+  
+  .transition-number-wrap {
+    font-size: 2.75rem;
+  }
+  
+  /* Explanation Card Wrap */
+  .explanation-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  
+  .explanation-math-grid {
+    border-left: none;
+    border-top: 2px solid var(--border-color);
+    padding-left: 0;
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+  }
+  
+  /* Vertical Timeline Mobile Transformation */
+  .timeline-container::before {
+    left: 20px; /* Align to the left side */
+  }
+  
+  .timeline-item {
+    width: 100% !important;
+    left: 0 !important;
+    padding-left: 45px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  
+  .timeline-dot {
+    left: 12px !important;
+    right: auto !important;
+  }
+  
+  /* Fighter Profile Page */
+  .fighter-header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+  
+  .fighter-large-img {
+    width: 240px;
+    height: 300px;
+  }
+  
+  .fighter-layout {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+  
+  .fighter-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- 3. SMALL MOBILE PHONES (Max 600px) --- */
+@media screen and (max-width: 600px) {
+  .section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  
+  .gallery-grid {
+    column-count: 1;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-cta {
+    grid-column: span 1;
+  }
+  
+  .footer-details {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .footer-year-calc {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .lightbox-prev,
+  .lightbox-next {
+    display: none; /* Hide arrows on small mobile, use swipe/tap */
+  }
+}
